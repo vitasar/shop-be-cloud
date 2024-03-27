@@ -1,0 +1,13 @@
+{
+  "resource": "/products/{productId}",
+  "path": "/products/7567ec4b-b10c-48c5-9345-fc73348a80a1",
+  "httpMethod": "GET",
+  "headers": {},
+  "multiValueHeaders": null,
+  "queryStringParameters": null,
+  "multiValueQueryStringParameters": null,
+  "pathParameters": {
+    "productId": "7567ec4b-b10c-48c5-9345-fc73348a80a1"
+  },
+  "stageVariables": null
+}

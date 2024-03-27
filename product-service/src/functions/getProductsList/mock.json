@@ -1,6 +1,13 @@
 {
+  "resource": "/products",
+  "path": "/products",
+  "httpMethod": "GET",
   "headers": {
-    "Content-Type": "application/json"
+    
   },
-  "body": "{\"name\": \"Frederic\"}"
+  "multiValueHeaders": null,
+  "queryStringParameters": null,
+  "multiValueQueryStringParameters": null,
+  "pathParameters": null,
+  "stageVariables": null
 }
