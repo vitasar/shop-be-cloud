@@ -1,0 +1,73 @@
+openapi: "3.0.0"
+info:
+  title: Product Service API
+  version: "1.0.0"
+servers:
+  - url: https://ufc0ui0w53.execute-api.eu-west-1.amazonaws.com/dev/
+paths:
+  /products:
+    get:
+      summary: Retrieve a list of products
+      description: This endpoint retrieves a full array of products using mock data stored within the Product Service.
+      responses:
+        '200':
+          description: A JSON array of products
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+  /products/{productId}:
+    get:
+      summary: Retrieve a product by ID
+      description: This endpoint retrieves a single product identified by its ID (productId) using mock data stored within the Product Service. The productId could represent productName, UUID, etc.
+      parameters:
+        - name: productId
+          in: path
+          required: true
+          description: The unique identifier of the product
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Details of a specific product
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Product'
+        '404':
+          description: Product not found
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        description:
+          type: string
+          description: A brief description of the product
+        id:
+          type: string
+          description: The product's unique identifier
+        price:
+          type: number
+          description: The price of the product
+        title:
+          type: string
+          description: The name of the product
+      required:
+        - description
+        - id
+        - price
+        - name
+    Error:
+      type: object
+      properties:
+        message:
+          type: string
+          example: "Product not found"

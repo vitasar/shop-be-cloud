@@ -13,7 +13,8 @@ export default {
               productId: true
             }
           }
-        }
+        },
+        cors: true,
       },
     },
   ],

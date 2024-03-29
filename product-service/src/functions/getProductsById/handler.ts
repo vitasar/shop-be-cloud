@@ -1,12 +1,13 @@
 import type { ValidatedEventAPIGatewayProxyEvent } from '@libs/api-gateway';
-import { formatJSONResponse } from '@libs/api-gateway';
-import { middyfy } from '@libs/lambda';
+import { formatJSONResponse } from '../../libs/api-gateway';
+import { middyfy } from '../../libs/lambda';
 
-import { products, notFoundMessage } from '@constants';
+import { products, notFoundMessage } from '../../constants';
 
-const getProductsById: ValidatedEventAPIGatewayProxyEvent<object> = async (event) => {
+export const getProductsById: ValidatedEventAPIGatewayProxyEvent<object> = async (event) => {
   const { productId } = event.pathParameters;
-  const product = await products.find((product) => product.id === productId);
+  const productList = await JSON.parse(event.body as string) || products;
+  const product = await productList.find((product) => product.id === productId);
 
   if (!product) {
     return formatJSONResponse({
