@@ -1,0 +1,14 @@
+{
+  "resource": "/products",
+  "path": "/products",
+  "httpMethod": "GET",
+  "headers": {},
+  "body": null,
+  "isBase64Encoded": false,
+  "requestContext": null,
+  "multiValueHeaders": null,
+  "queryStringParameters": null,
+  "multiValueQueryStringParameters": null,
+  "pathParameters": null,
+  "stageVariables": null
+}
