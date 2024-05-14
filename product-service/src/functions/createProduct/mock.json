@@ -1,0 +1,14 @@
+{
+  "resource": "/products",
+  "path": "/products",
+  "httpMethod": "POST",
+  "headers": {},
+  "body": "{\"id\": \"7567ec4b-b10c-48c5-9345-fc73c48a80aa11\",\"title\": \"Headphones One 11\", \"description\": \"Short Product Description11\", \"price\": 11 }",
+  "isBase64Encoded": false,
+  "requestContext": null,
+  "multiValueHeaders": null,
+  "queryStringParameters": null,
+  "multiValueQueryStringParameters": null,
+  "pathParameters": null,
+  "stageVariables": null
+}
